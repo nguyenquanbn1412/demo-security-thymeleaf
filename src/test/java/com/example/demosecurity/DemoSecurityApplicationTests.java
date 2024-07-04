@@ -36,16 +36,16 @@ class DemoSecurityApplicationTests {
                 .findByName("ADMIN").orElse(null);
 
         User user1 = User.builder()
-                .name("hien")
-                .email("hien@gmail.com")
+                .name("quan")
+                .email("quan@gmail.com")
                 .password(passwordEncoder.encode("123"))
                 .roles(List.of(userRole, adminRole))
                 .build();
         userRepository.save(user1);
         
         User user2 = User.builder()
-                .name("duy")
-                .email("duy@gmail.com")
+                .name("viet")
+                .email("viet@gmail.com")
                 .password(passwordEncoder.encode("123"))
                 .roles(List.of(userRole))
                 .build();

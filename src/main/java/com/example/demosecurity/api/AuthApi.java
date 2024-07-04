@@ -22,10 +22,10 @@ public class AuthApi {
         authService.login(request);
         return ResponseEntity.ok().build();
     }
+
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
         authService.register(request);
         return ResponseEntity.ok().build();
     }
-
 }
